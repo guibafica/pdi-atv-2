@@ -1,0 +1,221 @@
+// Começo header section and responsiveness
+.homepage {
+  h1, h3 {
+    font-family: 'Oswald', sans-serif;
+  }
+
+  header {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background: #fff;
+    padding: 1.5rem 10%;
+    box-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      height: 4rem;
+    }
+  }
+
+  .menuBar {
+    font-size: 3rem;
+    color: #666;
+    cursor: pointer;
+    display: none;
+  }
+
+  .navbarClosed {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+    }
+
+    li {
+      margin-left: 3rem;
+    }
+
+    .active {
+      color: var(--blue);
+    }
+
+    a {
+      font-size: 1.7rem;
+      color: #666;
+
+      &:hover {
+        color: var(--blue);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menuBar {
+      display: block;
+    }
+  
+    .navbarClosed {
+      position: fixed;
+      top: 8rem; 
+      left: 0;
+      width: 100%;
+      background: var(--blue);
+      border-top: 0.2rem solid rgba(0, 0, 0, 0.1);
+      transform: scaleY(0);
+      transform-origin: top;
+      opacity: 0;
+
+      ul {
+        flex-flow: column;
+        padding: 2rem;
+      }
+
+      li {
+        margin: 1.5rem;
+        width: 100%;
+      }
+
+      .active {
+        color: #333;
+        border-color: #333;
+      }
+
+      a {
+        display: block;
+        color: #fff;
+        padding-left: 2rem;
+        border-left: 0.2rem solid #fff;
+        font-size: 2rem;
+
+        &:hover {
+          color: #333;
+          border-color: #333;
+        }
+      }
+    }
+
+    .navbarOpened {
+      position: fixed;
+      top: 8rem; 
+      left: 0;
+      width: 100%;
+      background: var(--blue);
+      border-top: 0.2rem solid rgba(0, 0, 0, 0.1);
+      transform: scaleY(1);
+      transform-origin: top;
+      opacity: 1;
+
+      ul {
+        flex-flow: column;
+        padding: 2rem;
+        list-style: none;
+      }
+
+      li {
+        margin: 1.5rem;
+        width: 100%;
+      }
+
+      .active {
+        color: #333;
+        border-color: #333;
+      }
+
+      a {
+        display: block;
+        color: #fff;
+        padding-left: 2rem;
+        border-left: 0.2rem solid #fff;
+        font-size: 2rem;
+
+        &:hover {
+          color: #333;
+          border-color: #333;
+        }
+      }
+    }
+
+    .home .content {
+      text-align: center;
+
+      h3 {
+        font-size: 4.5rem;
+      }
+    }
+  
+    .order .row .image {
+      display: none;
+    }
+  }
+
+  @media (max-width: 991px) {
+    html {
+      font-size: 55%;
+    }
+
+    .home {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .homepage {
+      html {
+        font-size: 50%;
+      }
+
+      section {
+        padding: 1rem 5%;
+        padding-top: 8.5rem;
+      }
+    }
+  }
+}
+// Fim header section and responsiveness
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Começo home section 
+.home {
+  min-height: 100vh;
+  padding: 1rem 10%;
+  padding-top: 8.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+// Fim home section 
+
+// Começo footer section 
+.footer {
+  background: #282727;
+  padding: 1rem 7%;
+
+  .credit {
+    font-size: 2rem;
+    text-align: center;
+    border-top: 0.2rem solid rgba(255, 255, 255, 0.7);
+    border-bottom: 0.2rem solid rgba(255, 255, 255, 0.7);
+    padding: 2rem 1rem;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+    color: #fff;
+
+    a {
+      color: var(--blue);
+    }
+  }
+}
+// Fim footer section 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
